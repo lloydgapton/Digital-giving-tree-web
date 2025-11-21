@@ -1,10 +1,10 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
-import App from './App.tsx'
-
+import Button from './components/common/Button'
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <App />
+    <h1 className='bg-yellow-500 text-blue-500'>Hello BigMan</h1>
+    <Button />
   </StrictMode>,
 )
