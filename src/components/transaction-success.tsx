@@ -1,4 +1,4 @@
-import { Button } from '@/components/common/Button';
+import { Button } from './common/Button';
 import { CheckCircle, Gift, Link as LinkIcon, Twitter, Facebook } from 'lucide-react';
 
 type TransactionSuccessProps = {

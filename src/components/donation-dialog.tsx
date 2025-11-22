@@ -2,8 +2,8 @@ import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import * as z from 'zod';
 import { useState } from 'react';
-import type { Wish, Charity } from '@/lib/data';
-import {Button } from '@/components/common/Button';
+import type { Wish, Charity } from '../lib/data';
+import {Button } from './common/Button';
 import {
   Dialog,
   DialogContent,
@@ -11,7 +11,7 @@ import {
   DialogTitle,
   DialogDescription,
   DialogFooter,
-} from '@/components/common/dialog';
+} from './common/dialog';
 import {
   Form,
   FormControl,
@@ -19,12 +19,12 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from '@/components/common/form';
-import { Input } from '@/components/common/input';
-import { Textarea } from '@/components/common/textarea'
+} from './common/form';
+import { Input } from './common/input';
+import { Textarea } from './common/textarea'
 import { Plus, Minus } from 'lucide-react';
 import TransactionSuccess from './transaction-success';
-import { useToast } from '@/hooks/use-toast';
+import { useToast } from '../hooks/use-toast';
 
 const donationSchema = z.object({
   quantity: z.number().min(1, 'Must donate at least 1 item.'),
