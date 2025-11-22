@@ -42,7 +42,7 @@ createRoot(document.getElementById('root')!).render(
       <div className="container mx-auto px-4 py-8 md:py-12 relative z-10">
         <DonationStats />
         {wish && charity && (
-          <FeaturedWish wish={wish} charity={charity} />
+          <FeaturedWish wish={wish} charity={charity}/>
         )}
       </div>
       <Routes>
