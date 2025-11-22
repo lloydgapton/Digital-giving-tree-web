@@ -1,12 +1,12 @@
 import { useState } from 'react';
 import type { Wish, Charity } from '@/lib/data';
-import { findImage } from '@/lib/data';
+import { findImage } from "../lib/data";
 import { Link } from 'react-router-dom';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/common/Card'
-import { Progress } from '@/components/common/progress';
-import { Button } from '@/components/common/Button';
-import DonationDialog from '@/components/donation-dialog';
-import { Badge } from '@/components/common/badge';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './common/Card';
+import { Progress } from './common/progress';
+import { Button } from './common/Button';
+import DonationDialog from './donation-dialog';
+import { Badge } from './common/badge';
 import { ArrowRight, Sparkles } from 'lucide-react';
 
 type FeaturedWishProps = {
