@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import type { Wish, Charity } from '@/lib/data';
+import type { Wish, Charity } from '../lib/data';
 import { findImage } from "../lib/data";
 import { Link } from 'react-router-dom';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './common/Card';
