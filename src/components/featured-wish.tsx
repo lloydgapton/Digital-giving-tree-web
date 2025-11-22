@@ -52,7 +52,7 @@ export default function FeaturedWish({ wish, charity }: FeaturedWishProps) {
               <div>
                 <div className="flex justify-between items-start mb-2">
                     <h3 className="font-headline text-2xl font-bold" style={{color: "hsl(var(--primary))"}}>{wish.title}</h3>
-                    <Badge variant="secondary">{wish.category}</Badge>
+                    <Badge variant="secondary" style={{backgroundColor:"hsl(var(--secondary))"}}>{wish.category}</Badge>
                 </div>
                 <p className="text-sm text-muted-foreground mb-4">
                     For <Link to={`/charity/${charity.slug}`} className="font-semibold hover:underline"style={{color: "hsl(var(--primary))"}}>{charity.name}</Link>
@@ -70,7 +70,7 @@ export default function FeaturedWish({ wish, charity }: FeaturedWishProps) {
 
                 <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
                     <p className="text-lg font-bold " style={{color: "hsl(var(--primary))"}}>{formatCurrency(wish.unitPrice)} <span className="text-sm font-normal text-muted-foreground"style={{color: "hsl(var(--muted-foreground))"}} >per item</span></p>
-                    <Button onClick={() => setIsDialogOpen(true)} size="lg" className="button text-accent-foreground shadow-lg transform hover:scale-105 transition-transform" style={{backgroundColor: "hsl(var(--accent))", color:"hsl(var(--accent-foreground))"}}>
+                    <Button onClick={() => setIsDialogOpen(true)} size="lg" className="help-btn shadow-lg transform hover:scale-105 transition-transform" style={{backgroundColor: "hsl(var(--accent))", color:"hsl(var(--accent-foreground))"}}>
                         Help Complete this Wish <ArrowRight className="ml-2"/>
                     </Button>
                 </div>

@@ -25,8 +25,8 @@ body {
   font-family: 'PT Sans', sans-serif;
 }
 
-.button:hover{
-  background-color: hsl(var(--accent))/90;
+.help-btn:hover {
+  color: hsl(var(--accent) / 80);
 }
 
 @layer base {
