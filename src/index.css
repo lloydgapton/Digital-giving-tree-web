@@ -1,5 +1,10 @@
 @import "tailwindcss";
 
+@keyframes sway {
+  0%, 100% { transform: rotate(-5deg); }
+  50% { transform: rotate(15deg); }
+}
+
 body {
   font-family: 'PT Sans', sans-serif;
 }

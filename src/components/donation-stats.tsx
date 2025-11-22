@@ -34,10 +34,10 @@ export default function DonationStats() {
   ];
 
   return (
-    <section className="mb-12 md:mb-20">
-      <Card className="shadow-lg border-t-4 border-accent">
+    <section className="mb-12 md:mb-20 ">
+      <Card className="shadow-lg border-t-4 border-accent" style={{ backgroundColor: 'hsl(var(--card))' }}>
         <CardHeader className="text-center">
-          <CardTitle className="text-3xl md:text-4xl font-headline font-bold text-primary">Our Collective Impact</CardTitle>
+          <CardTitle className="text-3xl md:text-4xl font-headline font-bold text-primary" style={{ color: 'hsl(var(--primary))' }}>Our Collective Impact</CardTitle>
           <CardDescription className="text-base md:text-lg max-w-2xl mx-auto">
             Every contribution, big or small, adds to a wave of generosity. Here's a look at what we've achieved together so far.
           </CardDescription>
@@ -45,8 +45,8 @@ export default function DonationStats() {
         <CardContent>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 pt-6">
             {statItems.map((item) => (
-              <div key={item.title} className="group relative flex flex-col items-center text-center p-6 bg-background rounded-lg border-2 border-transparent transition-all duration-300 hover:border-primary hover:scale-105" style={{ color: 'hsl(var(--primary))' }}>
-                <Leaf className="absolute top-2 left-2 h-5 w-5 animate-sway group-hover:animate-none"/>
+              <div key={item.title} className="group relative flex flex-col items-center text-center p-6 bg-background rounded-lg border-2 border-transparent transition-all duration-300 hover:border-primary hover:scale-105" style={{ color: 'hsl(var(--primary))', backgroundColor: 'hsl(var(--background))'}}>
+                <Leaf className="absolute top-2 left-2 h-5 w-5 group-hover:[animation:none]" style={{ color: 'hsl(var(--primary))', animation: 'sway 2s ease-in-out infinite' }}/>
                 <div className="p-4 bg-accent/10 rounded-full mb-4">
                   {item.icon}
                 </div>
