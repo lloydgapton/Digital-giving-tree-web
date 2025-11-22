@@ -14,7 +14,9 @@ createRoot(document.getElementById('root')!).render(
     <BrowserRouter>
     <Header />
     <HeroCarousel />
+    <div className="container mx-auto px-4 py-8 md:py-12 relative z-10">
     <DonationStats />
+    </div>
     <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/charity" element={<CharityPage />} /> 

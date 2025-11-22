@@ -5,6 +5,22 @@
   50% { transform: rotate(15deg); }
 }
 
+.leaf-sway {
+  animation: sway 2s ease-in-out infinite;
+}
+
+.group:hover .leaf-sway {
+  animation: none;
+}
+
+.stat-card {
+  border-color: transparent;
+}
+
+.stat-card:hover {
+  border-color: hsl(var(--primary));
+}
+
 body {
   font-family: 'PT Sans', sans-serif;
 }
