@@ -24,9 +24,10 @@ import { Input } from '@/components/common/input';
 import { Textarea } from '@/components/common/textarea'
 import { Plus, Minus } from 'lucide-react';
 import TransactionSuccess from './transaction-success';
+import { useToast } from '@/hooks/use-toast';
 
 const donationSchema = z.object({
-  quantity: z.coerce.number().min(1, 'Must donate at least 1 item.'),
+  quantity: z.number().min(1, 'Must donate at least 1 item.'),
   email: z.string().email('Please enter a valid email address.'),
   name: z.string().optional(),
   note: z.string().optional(),
