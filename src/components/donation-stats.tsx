@@ -17,17 +17,17 @@ export default function DonationStats() {
 
   const statItems = [
     {
-      icon: <Gift className="h-8 w-8 text-primary" />,
+      icon: <Gift className="h-8 w-8" style={{ color: 'hsl(var(--primary))' }} />,
       title: 'Wishes Fulfilled',
       value: stats.wishesFulfilled.toLocaleString(),
     },
     {
-      icon: <DollarSign className="h-8 w-8 text-primary" />,
+      icon: <DollarSign className="h-8 w-8" style={{ color: 'hsl(var(--primary))' }} />,
       title: 'Donations Made',
       value: `$${stats.donationsMade.toLocaleString()}`,
     },
     {
-      icon: <HeartHandshake className="h-8 w-8 text-primary" />,
+      icon: <HeartHandshake className="h-8 w-8" style={{ color: 'hsl(var(--primary))' }} />,
       title: 'Active Charities',
       value: stats.activeCharities.toLocaleString(),
     },
@@ -37,7 +37,7 @@ export default function DonationStats() {
     <section className="mb-12 md:mb-20 ">
       <Card className="shadow-lg border-t-4 border-accent" style={{ backgroundColor: 'hsl(var(--card))', borderColor: 'hsl(var(--accent))' }}>
         <CardHeader className="text-center">
-          <CardTitle className="text-3xl md:text-4xl font-headline font-bold text-primary" style={{ color: 'hsl(var(--primary))' }}>Our Collective Impact</CardTitle>
+          <CardTitle className="text-3xl md:text-4xl font-headline font-bold" style={{ color: 'hsl(var(--primary))' }}>Our Collective Impact</CardTitle>
           <CardDescription className="text-base md:text-lg max-w-2xl mx-auto">
             Every contribution, big or small, adds to a wave of generosity. Here's a look at what we've achieved together so far.
           </CardDescription>
@@ -50,8 +50,8 @@ export default function DonationStats() {
                 <div className="p-4 rounded-full mb-4" style={{ backgroundColor: 'hsla(var(--accent), 0.1)' }}>
                   {item.icon}
                 </div>
-                <p className="text-sm font-medium text-muted-foreground mb-1" style={{ color: 'hsl(var(--muted-foreground))' }}>{item.title}</p>
-                <p className="text-4xl font-bold font-headline text-primary">{item.value}</p>
+                <p className="text-sm font-medium mb-1" style={{ color: 'hsl(var(--muted-foreground))' }}>{item.title}</p>
+                <p className="text-4xl font-bold font-headline" style={{color: "hsl(var(--primary))"}}>{item.value}</p>
               </div>
             ))}
           </div>

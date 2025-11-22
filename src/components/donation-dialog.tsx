@@ -65,7 +65,6 @@ export default function DonationDialog({ isOpen, setIsOpen, wish, charity }: Don
     console.log('Donation processed:', data);
     setDonationAmount(data.quantity * wish.unitPrice);
     // you would process the payment here.
-    // We'll simulate success.
     setStep('success');
     toast({
       title: 'Donation Successful!',

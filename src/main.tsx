@@ -1,4 +1,3 @@
-
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
@@ -34,9 +33,12 @@ const findFeaturedWish = () => {
 const { wish, charity } = findFeaturedWish();
 
 
+import { Toaster } from './components/common/toaster';
+
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <BrowserRouter>
+      <Toaster />
       <Header />
       <HeroCarousel />
       <div className="container mx-auto px-4 py-8 md:py-12 relative z-10">

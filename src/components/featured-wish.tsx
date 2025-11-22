@@ -54,22 +54,22 @@ export default function FeaturedWish({ wish, charity }: FeaturedWishProps) {
                     <h3 className="font-headline text-2xl font-bold" style={{color: "hsl(var(--primary))"}}>{wish.title}</h3>
                     <Badge variant="secondary" style={{backgroundColor:"hsl(var(--secondary))"}}>{wish.category}</Badge>
                 </div>
-                <p className="text-sm text-muted-foreground mb-4">
+                <p className="text-sm mb-4" style={{color: "hsl(var(--muted-foreground))"}}>
                     For <Link to={`/charity/${charity.slug}`} className="font-semibold hover:underline"style={{color: "hsl(var(--primary))"}}>{charity.name}</Link>
                 </p>
-                <p className="text-foreground/80 mb-4">{wish.description}</p>
+                <p className="mb-4" style={{color: "hsl(var(--foreground)/0.8)"}}>{wish.description}</p>
                 
                 <div className="mb-4">
-                    <div className="flex justify-between items-center mb-1 text-sm text-muted-foreground">
+                    <div className="flex justify-between items-center mb-1 text-sm" style={{color: "hsl(var(--muted-foreground))"}} >
                         <span>{formatCurrency(wish.quantityDonated * wish.unitPrice)} raised</span>
                         <span className="font-semibold">{formatCurrency(wish.quantityNeeded * wish.unitPrice)} goal</span>
                     </div>
                     <Progress value={progress} className="h-3"/>
-                    <p className="text-center text-sm font-medium text-accent mt-2 animate-pulse">Just {formatCurrency(amountLeft)} to go!</p>
+                    <p className="text-center text-sm font-medium mt-2 animate-pulse" style={{color: "hsl(var(--accent))"}}>Just {formatCurrency(amountLeft)} to go!</p>
                 </div>
 
                 <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-                    <p className="text-lg font-bold " style={{color: "hsl(var(--primary))"}}>{formatCurrency(wish.unitPrice)} <span className="text-sm font-normal text-muted-foreground"style={{color: "hsl(var(--muted-foreground))"}} >per item</span></p>
+                    <p className="text-lg font-bold " style={{color: "hsl(var(--primary))"}}>{formatCurrency(wish.unitPrice)} <span className="text-sm font-normal"style={{color: "hsl(var(--muted-foreground))"}} >per item</span></p>
                     <Button onClick={() => setIsDialogOpen(true)} size="lg" className="help-btn shadow-lg transform hover:scale-105 transition-transform" style={{backgroundColor: "hsl(var(--accent))", color:"hsl(var(--accent-foreground))"}}>
                         Help Complete this Wish <ArrowRight className="ml-2"/>
                     </Button>
