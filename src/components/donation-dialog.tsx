@@ -93,19 +93,19 @@ export default function DonationDialog({ isOpen, setIsOpen, wish, charity }: Don
         {step === 'form' ? (
           <>
             <DialogHeader>
-              <DialogTitle className="font-headline text-2xl text-primary">Donate to: {wish.title}</DialogTitle>
+              <DialogTitle className="font-headline text-2xl" style={{color: "hsl(var(--primary))"}}>Donate to: {wish.title}</DialogTitle>
               <DialogDescription>
                 You're supporting '{charity.name}'. Thank you for your generosity.
               </DialogDescription>
             </DialogHeader>
             <Form {...form}>
-              <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
+              <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
                 <FormField
                   control={form.control}
                   name="quantity"
                   render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>Quantity</FormLabel>
+                    <FormItem className="space-y-2">
+                      <FormLabel className="mb-2 block">Quantity</FormLabel>
                       <FormControl>
                         <div className="flex items-center gap-2">
                            <Button type="button" variant="outline" size="icon" className="h-8 w-8" onClick={() => handleQuantityChange(-1)} disabled={field.value <= 1}>
@@ -125,7 +125,7 @@ export default function DonationDialog({ isOpen, setIsOpen, wish, charity }: Don
                   control={form.control}
                   name="email"
                   render={({ field }) => (
-                    <FormItem>
+                    <FormItem className="space-y-2">
                       <FormLabel>Email (for receipt)</FormLabel>
                       <FormControl>
                         <Input placeholder="your.email@example.com" {...field} />
@@ -138,7 +138,7 @@ export default function DonationDialog({ isOpen, setIsOpen, wish, charity }: Don
                   control={form.control}
                   name="name"
                   render={({ field }) => (
-                    <FormItem>
+                    <FormItem className="space-y-2">
                       <FormLabel>Name (Optional)</FormLabel>
                       <FormControl>
                         <Input placeholder="Jane Doe" {...field} />
@@ -150,7 +150,7 @@ export default function DonationDialog({ isOpen, setIsOpen, wish, charity }: Don
                   control={form.control}
                   name="note"
                   render={({ field }) => (
-                    <FormItem>
+                    <FormItem className="space-y-2">
                       <FormLabel>Note (Optional)</FormLabel>
                       <FormControl>
                         <Textarea placeholder="A message of support..." {...field} />
@@ -159,10 +159,10 @@ export default function DonationDialog({ isOpen, setIsOpen, wish, charity }: Don
                   )}
                 />
                 <DialogFooter className="sm:justify-between items-center pt-4">
-                  <div className="text-2xl font-bold text-primary font-headline">
+                  <div className="text-2xl font-bold font-headline" style={{color: "hsl(var(--primary))"}}>
                     Total: ${total.toFixed(2)}
                   </div>
-                  <Button type="submit" className="bg-accent hover:bg-accent/90 text-accent-foreground">
+                  <Button type="submit" className="bg-accent hover:bg-accent/90 text-accent-foreground" style={{color: "hsl(var(--accent-foreground))", backgroundColor:"hsl(var(--accent))"}}>
                     Complete Donation
                   </Button>
                 </DialogFooter>
