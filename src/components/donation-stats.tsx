@@ -1,4 +1,4 @@
-import { charities } from '@/lib/data';
+import { charities } from '../lib/data';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './common/Card';
 import { DollarSign, Gift, HeartHandshake, Leaf } from 'lucide-react';
 
@@ -45,12 +45,12 @@ export default function DonationStats() {
         <CardContent>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 pt-6">
             {statItems.map((item) => (
-              <div key={item.title} className="group relative flex flex-col items-center text-center p-6 bg-background rounded-lg border-2 border-transparent transition-all duration-300 hover:border-primary hover:scale-105">
-                <Leaf className="absolute top-2 left-2 h-5 w-5 text-primary animate-sway group-hover:animate-none" />
+              <div key={item.title} className="group relative flex flex-col items-center text-center p-6 bg-background rounded-lg border-2 border-transparent transition-all duration-300 hover:border-primary hover:scale-105" style={{ color: 'hsl(var(--primary))' }}>
+                <Leaf className="absolute top-2 left-2 h-5 w-5 animate-sway group-hover:animate-none"/>
                 <div className="p-4 bg-accent/10 rounded-full mb-4">
                   {item.icon}
                 </div>
-                <p className="text-sm font-medium text-muted-foreground mb-1">{item.title}</p>
+                <p className="text-sm font-medium text-muted-foreground mb-1" style={{ color: 'hsl(var(--muted-foreground))' }}>{item.title}</p>
                 <p className="text-4xl font-bold font-headline text-primary">{item.value}</p>
               </div>
             ))}
