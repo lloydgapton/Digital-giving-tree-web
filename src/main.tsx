@@ -9,8 +9,6 @@ import DonationStats from './components/donation-stats';
 import FeaturedWish from './components/featured-wish';
 import { charities, type Wish, type Charity } from './lib/data';
 
-
-
 const findFeaturedWish = () => {
   let featuredWish: Wish | null = null;
   let featuredCharity: Charity | null = null;
